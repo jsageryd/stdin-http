@@ -10,6 +10,27 @@ HTTP request made to it.
 $ go get -u github.com/jsageryd/stdin-http
 ```
 
+## Example
+```
+$ echo 'Hello, World o/' | stdin-http -p 1234
+2018/05/25 10:06:18 Accepting data from stdin...
+2018/05/25 10:06:18 Serving 16 bytes at :1234...
+2018/05/25 10:06:30 [::1]:56189 GET /
+```
+
+```
+$ http get :1234
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Length: 16
+Content-Type: text/plain; charset=utf-8
+Date: Fri, 25 May 2018 08:06:30 GMT
+Last-Modified: Fri, 25 May 2018 08:06:30 GMT
+
+Hello, World o/
+
+```
+
 ## License
 Copyright (c) 2018 Johan Sageryd <j@1616.se>
 
