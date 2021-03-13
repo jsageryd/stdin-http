@@ -7,7 +7,7 @@ HTTP request made to it.
 
 ## Installation
 ```
-$ go get -u github.com/jsageryd/stdin-http
+$ go install github.com/jsageryd/stdin-http@latest
 ```
 
 ## Example
